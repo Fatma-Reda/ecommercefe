@@ -82,10 +82,6 @@ class ProductDetails extends Component {
                 </div>
                 <div className="product-details__meta">
                   Categories:{this.props.product.category}
-                  <a rel="tag" href="#">
-                    {this.props.product.category}
-                  </a>
-                  ,{" "}
                 </div>
               </div>
             </section>

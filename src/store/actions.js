@@ -25,14 +25,14 @@ export const setProducts = products => {
 
 //Add Product
 
-export const addProduct = () => {
+export const addProduct = (product) => {
   return dispatch => {
-    Axios.post(`${baseURL}/products/addProduct`, {
+    Axios.post(`${baseURL}/products/addProduct`,product, {
       headers: {
         Authorization: localStorage.getItem("token")
       }
     }).then(response => {
-      dispatch(addNewProduct(response));
+      dispatch(addNewProduct(response.data));
     });
   };
 };

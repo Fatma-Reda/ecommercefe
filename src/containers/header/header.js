@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import personalImage from "../../assets/img/PersonalImage.png";
 import logo from "../../assets/img/logo.png";
 import bag from "../../assets/img/icons/icon-cart-big.svg";
-import AddProduct from "../addProduct/addProduct";
 
 import { NavLink } from "react-router-dom";
 
@@ -197,7 +196,7 @@ class Header extends Component {
                     </li>
                     <li className="list__item">
                       <NavLink
-                        to="/addProduct"
+                        to="/products/"
                         exact
                         className="nav__inner-link"
                       >

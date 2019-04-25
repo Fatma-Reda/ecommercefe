@@ -2,11 +2,22 @@ import * as actionTypes from "./actions";
 
 const initialState = {
   products: [],
+  categories: [
+    { name: "Arts & Crafts" },
+    { name: "Automotive" },
+    { name: "Baby" },
+    { name: "Books" },
+    { name: "Eletronics" },
+    { name: "Health & Household" },
+    { name: "Military Accessories" },
+    { name: "Movies & Television" },
+    { name: "Toys & Games" }
+  ],
   selectedProduct: {}
 };
 
 const reducer = (state = initialState, action) => {
-  const productsArray = [...state.products];
+  let productsArray = [...state.products];
   switch (action.type) {
     case actionTypes.SET_PRODUCTS:
       let productsGetFromHttp = [];
@@ -22,7 +33,6 @@ const reducer = (state = initialState, action) => {
           id: action.payload[key]._id
         });
       }
-      console.log(productsGetFromHttp);
       return {
         ...state,
         products: productsGetFromHttp
@@ -30,6 +40,7 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.ADD_PRODUCT:
       productsArray = [...state.products];
+      console.log(action.payload);
       productsArray.push(action.payload);
       return {
         ...state,
@@ -40,7 +51,7 @@ const reducer = (state = initialState, action) => {
       const productIndex = productsArray.findIndex(
         product => product.id === action.payload
       );
-      console.log("reducer delete ",action.payload);
+      console.log("reducer delete ", action.payload);
       productsArray.splice(productIndex, 1);
       return {
         ...state,
@@ -48,8 +59,7 @@ const reducer = (state = initialState, action) => {
       };
 
     case actionTypes.SHOW_PRODUCT_DETAILS:
-     
-      console.log("reducer view ",action.payload);
+      console.log("reducer view ", action.payload);
       return {
         ...state,
         selectedProduct: action.payload
