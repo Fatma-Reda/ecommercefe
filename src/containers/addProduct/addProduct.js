@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import product from "../../assets/img/products/product-grey-7.jpg";
+//import product from "../../assets/img/products/product-grey-7.jpg";
 import { connect } from "react-redux";
 import * as actionTypes from "../../store/actions";
 
@@ -55,40 +55,6 @@ class AddProduct extends Component {
     return (
       <div className="add-product container">
         <form action=" ">
-          <div className="add-product__images slider">
-            <div className="add-product__image-actions">
-              <div className="add-product__image-action">
-                <a href="#">
-                  <i className="fas fa-plus-square" />
-                </a>
-                <a href="#">
-                  <i className="fas fa-edit" />
-                </a>
-                <a href="#">
-                  <i className="fas fa-trash-alt" />
-                </a>
-              </div>
-            </div>
-            <div className="slider__items">
-              <div
-                className="slider__item active"
-                style={{ backgroundImage: `url(${product})` }}
-              />
-              <div
-                className="slider__item"
-                style={{ backgroundImage: `url(${product})` }}
-              />
-              <div
-                className="slider__item"
-                style={{ backgroundImage: `url(${product})` }}
-              />
-            </div>
-            <div className="slider__indicators">
-              <span className="slider__indicator active" />
-              <span className="slider__indicator" />
-              <span className="slider__indicator" />
-            </div>
-          </div>
           <div className="add-product__data">
             <div className="form-controls">
               <section className="tabs">

@@ -20,8 +20,8 @@ class UserForm extends Component {
     render() {
         return (
             <form className={classes.UserForm} onSubmit={this.loginHandler}>
-                <input onChange={(event) => this.setState({ username: event.target.value }) } type="text" name="username"></input>
-                <input onChange={(event) => this.setState({ password: event.target.value })} type="password" name="password"></input>
+                <input onChange={(event) => this.setState({ username: event.target.value }) } type="text" name="username" placeholder="Enter UserName"></input>
+                <input onChange={(event) => this.setState({ password: event.target.value }) } type="password" name="password" placeholder="Enter Password"></input>
                 <button type="submit" >
                     login
                 </button>

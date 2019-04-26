@@ -1,24 +1,24 @@
-.UserForm{
-    padding: 15px;
-    margin: 10px auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #ccc;
-    background-color: rgb(242, 248, 253);
-    width: 50%;
-    
+.UserForm {
+  padding: 15px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: rgb(242, 248, 253);
+  width: 35%;
 }
 
-.UserForm input[type="text"] ,input[type="password"] {
-    margin:5px auto;
-    padding: 15px;
-    text-align: left;
-    display: block;
-
+.UserForm input[type="password"],
+input[type="text"] {
+  margin: 5px auto;
+  padding: 15px;
+  text-align: left;
+  display: block;
 }
-.UserForm button{
-    margin: 10px auto;
-    padding: 10px;
-    display: block;
-    background-color: cadetblue;
+.UserForm button {
+  margin: 10px auto;
+  padding: 10px;
+  display: block;
+  background-color: cadetblue;
+  cursor: pointer;
 }

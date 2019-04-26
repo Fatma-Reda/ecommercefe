@@ -7,6 +7,16 @@ import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   render() {
+    let addPro = null;
+    if (localStorage.getItem("userid")) {
+      addPro = (
+        <li className="list__item">
+          <NavLink to="/products/" exact className="nav__inner-link">
+            Add Product
+          </NavLink>
+        </li>
+      );
+    }
     return (
       <div className="header">
         <div className="header__upper">
@@ -194,15 +204,7 @@ class Header extends Component {
                         Product Listing
                       </a>
                     </li>
-                    <li className="list__item">
-                      <NavLink
-                        to="/products/"
-                        exact
-                        className="nav__inner-link"
-                      >
-                        Add Product
-                      </NavLink>
-                    </li>
+                    {addPro}
                   </ul>
                 </div>
               </li>

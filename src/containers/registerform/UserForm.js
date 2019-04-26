@@ -20,8 +20,8 @@ class UserForm extends Component {
   render() {
     return (
       <form className={classes.UserForm} onSubmit={this.registerHandler}>
-        <label>
-          username{" "}
+        <label className={classes.label} >
+          username
           <input
             onChange={event => this.setState({ username: event.target.value })}
             type="text"
@@ -29,8 +29,8 @@ class UserForm extends Component {
             required
           />
         </label>
-        <label>
-          password{" "}
+        <label className={classes.label}>
+          password
           <input
             onChange={event => this.setState({ password: event.target.value })}
             type="password"
@@ -38,8 +38,8 @@ class UserForm extends Component {
             required
           />
         </label>
-        <label>
-          email{" "}
+        <label className={classes.label}>
+          email
           <input
             onChange={event => this.setState({ email: event.target.value })}
             type="email"
